@@ -256,6 +256,16 @@ export const content: Content = {
     },
     {
       id: 8,
+      title: 'King Salman Park',
+      company: 'Albawani',
+      country: 'KSA',
+      sector: 'Entertainment',
+      description: 'Coordination with architects and contractors on Riyadh\'s King Salman Park.',
+      tags: ['Coordination', 'Landscape', 'BIM'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 9,
       title: 'IL-Bosco, New Administrative Capital',
       company: 'Solid Construction',
       country: 'EG',
@@ -265,7 +275,7 @@ export const content: Content = {
       image: '/images/projects/placeholder.webp',
     },
     {
-      id: 9,
+      id: 10,
       title: 'Odyssia City, Mostakbal City',
       company: 'Solid Construction',
       country: 'EG',
@@ -275,7 +285,7 @@ export const content: Content = {
       image: '/images/projects/placeholder.webp',
     },
     {
-      id: 10,
+      id: 11,
       title: 'District 5 – Marakez',
       company: 'Solid Construction',
       country: 'EG',
@@ -366,14 +376,14 @@ export const content: Content = {
     {
       title: 'One-click circuiting',
       problem: 'Creating electrical circuits device by device in Revit is slow and error-prone.',
-      tool: 'TODO: Dynamo or C# add-in? — creates circuits for the whole project or a selected circuit in one click.',
-      timeSaved: 'TODO: time saved',
+      tool: 'C# Revit add-in that creates circuits for the whole project, or for a selected circuit, in one click.',
+      timeSaved: 'Saves about 80% of the task time',
     },
     {
       title: 'One-click view dimensions',
       problem: 'Dimensioning every view by hand takes hours on each drawing set.',
-      tool: 'TODO: Dynamo or C# add-in? — dimensions the active view in one click.',
-      timeSaved: 'TODO: time saved',
+      tool: 'C# Revit add-in that dimensions the active view in one click.',
+      timeSaved: 'Saves about 80% of the task time',
     },
   ],
 

@@ -79,7 +79,7 @@ export interface Cert {
   title: string
   issuer: string
   date: string
-  description: string
+  description?: string
   kind: 'degree' | 'certification'
 }
 
@@ -109,29 +109,335 @@ export interface Content {
   footer: { tagline: string }
 }
 
-// Filled in Task 2.
 export const content: Content = {
   identity: {
     name: 'Ahmed Gamal Elnopy',
     initials: 'AE',
     title: 'Electrical Engineer · MEP & BIM',
-    badge: '',
-    valueProp: '',
-    email: 'TODO: email',
-    phones: [],
-    linkedin: 'TODO: LinkedIn URL',
-    location: '',
+    badge: 'Open to opportunities · Abu Dhabi, UAE',
+    valueProp:
+      'I turn electrical designs into coordinated, buildable BIM models and shop drawings — across the UAE, Saudi Arabia and Egypt.',
+    email: 'lnopy67@gmail.com',
+    phones: ['+971 50 180 0351', '+20 109 490 5285'],
+    linkedin: 'https://www.linkedin.com/in/lnopy/',
+    location: 'Abu Dhabi, UAE',
     cvUrl: '/cv/Ahmed-Elnopy-CV.pdf',
   },
-  nav: [],
-  sections: {},
-  stats: [],
-  tools: [],
-  about: { paragraphs: [], focusAreas: [], facts: [] },
-  projects: [],
-  experience: [],
-  automation: [],
-  skills: [],
-  education: [],
-  footer: { tagline: '' },
+
+  nav: [
+    { id: 'about', label: 'About' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'automation', label: 'Automation' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'education', label: 'Education' },
+    { id: 'contact', label: 'Contact' },
+  ],
+
+  sections: {
+    about: { id: 'about', number: '01', label: 'Profile', heading: 'From load schedule to site-ready drawing.' },
+    projects: { id: 'projects', number: '02', label: 'Projects', heading: 'Selected work across three countries.' },
+    experience: { id: 'experience', number: '03', label: 'Experience', heading: 'Six companies, one discipline.' },
+    automation: { id: 'automation', number: '04', label: 'Automation & Tools', heading: 'One click instead of one afternoon.' },
+    skills: { id: 'skills', number: '05', label: 'Skills', heading: 'What I bring to a project team.' },
+    education: { id: 'education', number: '06', label: 'Education & Certifications', heading: 'Built on engineering, sharpened by BIM.' },
+    contact: { id: 'contact', number: '07', label: 'Contact', heading: "Let's build something coordinated." },
+  },
+
+  stats: [
+    { value: 6, suffix: '+', label: 'Years of experience' },
+    { value: 3, label: 'Countries · UAE, KSA, Egypt' },
+    { value: 6, label: 'Companies' },
+    { value: 10, suffix: '+', label: 'Projects delivered' },
+  ],
+
+  tools: [
+    'Revit',
+    'AutoCAD',
+    'Navisworks',
+    'ETAP',
+    'DIALux evo',
+    'Dynamo',
+    'C# / Revit API',
+    'BIM 360',
+    'ACC',
+    'ISO 19650',
+  ],
+
+  about: {
+    paragraphs: [
+      'I am an electrical engineer with six years in design and technical office roles on commercial, governmental and large entertainment projects in Egypt, Saudi Arabia and the UAE.',
+      'My work covers LV/MV power design and light current systems, and turning them into approved shop drawings and submittals. I coordinate MEP models in Revit and Navisworks, and I write Dynamo scripts and C# add-ins to automate repetitive Revit work.',
+    ],
+    focusAreas: [
+      { title: 'Power & LV/MV', description: 'Load schedules, single-line diagrams and BOQs.' },
+      { title: 'Light current', description: 'Fire alarm, data networks, CCTV and sound systems.' },
+      { title: 'Technical office', description: 'Shop drawings, details and material submittals.' },
+      { title: 'BIM & automation', description: 'Revit, Navisworks coordination, Dynamo and C# add-ins.' },
+    ],
+    facts: [
+      { label: 'Based in', value: 'Abu Dhabi, UAE' },
+      { label: 'Current', value: 'MTEC · since Jul 2025' },
+      { label: 'Degree', value: 'BSc Electrical Engineering, South Valley University' },
+      { label: 'Languages', value: 'Arabic (native), English' },
+    ],
+  },
+
+  projects: [
+    {
+      id: 1,
+      title: 'Manchester City Yas Residences by Ohana',
+      company: 'MTEC',
+      country: 'UAE',
+      sector: 'Residential',
+      description: 'Electrical shop drawings on Yas Island, Abu Dhabi.',
+      tags: ['Shop Drawings', 'Lighting', 'Containment'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 2,
+      title: 'Elie Saab Waterfront by Ohana',
+      company: 'MTEC',
+      country: 'UAE',
+      sector: 'Residential',
+      description: 'Electrical shop drawings on Al Reem Island, Abu Dhabi.',
+      tags: ['Shop Drawings', 'Power', 'Lighting'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 3,
+      title: 'Jacob & Co. Beachfront Living by Ohana',
+      company: 'MTEC',
+      country: 'UAE',
+      sector: 'Residential',
+      description: 'Electrical shop drawings at Al Jurf, Abu Dhabi.',
+      tags: ['Shop Drawings', 'Power', 'Containment'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 4,
+      title: 'RCU AlUla Schools',
+      company: 'EGEC',
+      country: 'KSA',
+      sector: 'Education',
+      description: 'Complete electrical design for Royal Commission for AlUla school projects.',
+      tags: ['Full Design', 'Revit', 'BIM'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 5,
+      title: 'MODON Projects',
+      company: 'EGEC',
+      country: 'KSA',
+      sector: 'Industrial',
+      description: 'Electrical design packages for the Saudi Authority for Industrial Cities.',
+      tags: ['Power', 'Lighting', 'LV'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 6,
+      title: 'Madina Entertainment Complex (SEVEN)',
+      company: 'Albawani',
+      country: 'KSA',
+      sector: 'Entertainment',
+      description: 'BIM models and construction drawings for an entertainment complex in Madinah.',
+      tags: ['BIM Model', 'Construction Dwgs', 'Revit'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 7,
+      title: 'AlUla Projects',
+      company: 'Albawani',
+      country: 'KSA',
+      sector: 'Government',
+      description: 'Coordination with architects and contractors on Royal Commission for AlUla projects.',
+      tags: ['Coordination', 'BIM', 'QTO'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 8,
+      title: 'IL-Bosco, New Administrative Capital',
+      company: 'Solid Construction',
+      country: 'EG',
+      sector: 'Residential',
+      description: 'Electrical shop drawings for a residential development in the New Capital.',
+      tags: ['Shop Drawings', 'Revit', 'RFIs'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 9,
+      title: 'Odyssia City, Mostakbal City',
+      company: 'Solid Construction',
+      country: 'EG',
+      sector: 'Residential',
+      description: 'Electrical shop drawings for a residential community in Mostakbal City.',
+      tags: ['Shop Drawings', 'Revit', 'Site Support'],
+      image: '/images/projects/placeholder.webp',
+    },
+    {
+      id: 10,
+      title: 'District 5 – Marakez',
+      company: 'Solid Construction',
+      country: 'EG',
+      sector: 'Mixed-use',
+      description: 'Optimized electrical layouts to cut rework during construction.',
+      tags: ['Layout Optimization', 'RFIs', 'Shop Drawings'],
+      image: '/images/projects/placeholder.webp',
+    },
+  ],
+
+  experience: [
+    {
+      company: 'MTEC',
+      role: 'BIM Electrical Technical Office Engineer',
+      location: 'Abu Dhabi, UAE',
+      start: 'Jul 2025',
+      end: 'Present',
+      current: true,
+      bullets: [
+        'Produce shop drawings for power distribution, lighting and cable containment.',
+        'Coordinate with consultants and clients to secure design approvals and close technical queries.',
+        'Prepare technical submittals, load distribution schedules and compliance reports.',
+      ],
+    },
+    {
+      company: 'C&P',
+      role: 'BIM Electrical Technical Office Engineer',
+      location: 'Cairo, Egypt',
+      start: 'May 2025',
+      end: 'Jul 2025',
+      bullets: [
+        'Prepared shop drawings for lighting, mechanical power, small power and light current systems.',
+        'Assisted with material submittals and coordinated supplier approvals.',
+        'Supported project BOQ preparation.',
+      ],
+    },
+    {
+      company: 'EGEC',
+      role: 'BIM Electrical Design Engineer',
+      location: 'Cairo, Egypt',
+      start: 'Jul 2024',
+      end: 'May 2025',
+      bullets: [
+        'Designed complete electrical systems for RCU school projects in AlUla using Revit and BIM standards.',
+        'Delivered power, lighting and LV distribution design packages for MODON projects.',
+        'Resolved model clashes with mechanical and civil teams in Navisworks.',
+      ],
+    },
+    {
+      company: 'Albawani',
+      role: 'BIM Electrical Technical Office Engineer',
+      location: 'Riyadh, KSA',
+      start: 'May 2023',
+      end: 'Jul 2024',
+      bullets: [
+        'Developed BIM models and construction drawings for the Madina Entertainment Complex.',
+        'Coordinated with architects and contractors on King Salman Park and AlUla projects.',
+        'Conducted quantity take-offs and kept project documentation accurate through design stages.',
+      ],
+    },
+    {
+      company: 'Solid Construction',
+      role: 'BIM Electrical Technical Office Engineer',
+      location: 'Cairo, Egypt',
+      start: 'Dec 2021',
+      end: 'May 2023',
+      bullets: [
+        'Produced shop drawings for IL-Bosco (New Capital) and Odyssia City (Mostakbal City).',
+        'Optimized electrical layouts for District 5 – Marakez to minimize rework on site.',
+        'Issued design revisions and answered RFIs within project timelines.',
+      ],
+    },
+    {
+      company: 'Power Tech Co. for Earthing',
+      role: 'Electrical Technical Office Engineer',
+      location: 'Cairo, Egypt',
+      start: 'Dec 2020',
+      end: 'Dec 2021',
+      bullets: [
+        'Prepared tender documents and BOQs for earthing and lightning protection systems.',
+        'Produced technical drawings and specifications for earthing installations.',
+        'Supported site supervision and answered technical queries during execution.',
+      ],
+    },
+  ],
+
+  automation: [
+    {
+      title: 'One-click circuiting',
+      problem: 'Creating electrical circuits device by device in Revit is slow and error-prone.',
+      tool: 'TODO: Dynamo or C# add-in? — creates circuits for the whole project or a selected circuit in one click.',
+      timeSaved: 'TODO: time saved',
+    },
+    {
+      title: 'One-click view dimensions',
+      problem: 'Dimensioning every view by hand takes hours on each drawing set.',
+      tool: 'TODO: Dynamo or C# add-in? — dimensions the active view in one click.',
+      timeSaved: 'TODO: time saved',
+    },
+  ],
+
+  skills: [
+    {
+      letter: 'A',
+      title: 'BIM & Software',
+      skills: ['Revit', 'Navisworks', 'AutoCAD', 'BIM 360 / ACC', 'Dynamo', 'C# / Revit API'],
+    },
+    {
+      letter: 'B',
+      title: 'Electrical Design',
+      skills: ['Load schedules', 'Single-line diagrams', 'LV/MV distribution', 'ETAP', 'DIALux evo', 'Earthing & lightning protection'],
+    },
+    {
+      letter: 'C',
+      title: 'Light Current',
+      skills: ['Fire alarm', 'Data networks', 'CCTV', 'Sound systems'],
+    },
+    {
+      letter: 'D',
+      title: 'Technical Office',
+      skills: ['Shop drawings', 'Submittals', 'BOQ & QTO', 'RFIs', 'Consultant coordination'],
+    },
+  ],
+
+  education: [
+    {
+      kind: 'degree',
+      title: 'BSc Electrical Engineering',
+      issuer: 'South Valley University',
+      date: '2015 – 2020',
+      description: 'Graduation project: Power System Distribution and Light Current (Excellent).',
+    },
+    {
+      kind: 'certification',
+      title: 'Mastering Revit API',
+      issuer: 'Elzohry Academy',
+      date: '2023',
+      description: 'C#, Revit API, element manipulation, discipline automation, UI and deployment.',
+    },
+    {
+      kind: 'certification',
+      title: 'MEP BIM Diploma',
+      issuer: 'Kaitech Scholarship',
+      date: '2021',
+      description: 'Revit MEP, clash detection, ISO 19650, Dynamo and 4D–7D simulation.',
+    },
+    {
+      kind: 'certification',
+      title: 'Power System Distribution',
+      issuer: 'JELECOM',
+      date: '2020',
+      description: 'Lighting design, power distribution, equipment sizing, earthing and low current systems.',
+    },
+    {
+      kind: 'certification',
+      title: 'PLC & Automation',
+      issuer: 'ATS',
+      date: '2020',
+    },
+  ],
+
+  footer: {
+    tagline: 'Electrical design, BIM coordination and automation.',
+  },
 }

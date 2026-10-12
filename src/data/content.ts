@@ -24,6 +24,7 @@ export interface Identity {
   cvUrl: string
   /** Path to a portrait image; initials are shown until one is added. */
   photo?: string
+  photoAlt: string
 }
 
 export interface Stat {
@@ -137,7 +138,8 @@ export const content: Content = {
     linkedin: 'https://www.linkedin.com/in/lnopy/',
     location: 'Abu Dhabi, UAE',
     cvUrl: '/cv/Ahmed-Elnopy-CV.pdf',
-    photo: undefined, // TODO: add /images/profile.webp
+    photo: '/images/profile.webp',
+    photoAlt: 'Ahmed Gamal Elnopy on site in Abu Dhabi, wearing a hard hat and MTEC safety vest',
   },
 
   nav: [

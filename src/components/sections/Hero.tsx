@@ -52,13 +52,14 @@ export function Hero() {
         </div>
 
         <div className="mx-auto w-full max-w-sm rounded-lg border border-border bg-surface/70 p-3 backdrop-blur-md">
-          <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-surface-2 to-bg">
+          <div className="flex aspect-[3/4] items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-surface-2 to-bg">
             {identity.photo ? (
               <img
                 src={identity.photo}
-                alt={identity.name}
-                width={480}
-                height={600}
+                alt={identity.photoAlt}
+                width={768}
+                height={1024}
+                fetchPriority="high"
                 className="size-full object-cover"
               />
             ) : (

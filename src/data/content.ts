@@ -22,6 +22,8 @@ export interface Identity {
   linkedin: string
   location: string
   cvUrl: string
+  /** Path to a portrait image; initials are shown until one is added. */
+  photo?: string
 }
 
 export interface Stat {
@@ -107,6 +109,19 @@ export interface Content {
   skills: SkillGroup[]
   education: Cert[]
   footer: { tagline: string }
+  ui: {
+    skipLink: string
+    hireMe: string
+    viewWork: string
+    downloadCv: string
+    openMenu: string
+    closeMenu: string
+    primaryNav: string
+    homeLink: string
+    emailLabel: string
+    linkedinLabel: string
+    phoneLabel: string
+  }
 }
 
 export const content: Content = {
@@ -122,6 +137,7 @@ export const content: Content = {
     linkedin: 'https://www.linkedin.com/in/lnopy/',
     location: 'Abu Dhabi, UAE',
     cvUrl: '/cv/Ahmed-Elnopy-CV.pdf',
+    photo: undefined, // TODO: add /images/profile.webp
   },
 
   nav: [
@@ -449,5 +465,19 @@ export const content: Content = {
 
   footer: {
     tagline: 'Electrical design, BIM coordination and automation.',
+  },
+
+  ui: {
+    skipLink: 'Skip to content',
+    hireMe: 'Hire me',
+    viewWork: 'View work',
+    downloadCv: 'Download CV',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    primaryNav: 'Primary',
+    homeLink: 'Back to top',
+    emailLabel: 'Email',
+    linkedinLabel: 'LinkedIn',
+    phoneLabel: 'Phone',
   },
 }

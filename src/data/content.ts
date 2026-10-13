@@ -140,6 +140,10 @@ export interface Content {
     viewProject: string
     renderCredit: string
     countries: Record<Project['country'], string>
+    current: string
+    problemLabel: string
+    solutionLabel: string
+    savedLabel: string
   }
 }
 
@@ -509,5 +513,9 @@ export const content: Content = {
     viewProject: 'View project',
     renderCredit: 'Render:',
     countries: { UAE: 'UAE', KSA: 'Saudi Arabia', EG: 'Egypt' },
+    current: 'Current',
+    problemLabel: 'Problem',
+    solutionLabel: 'Solution',
+    savedLabel: 'Time saved',
   },
 }

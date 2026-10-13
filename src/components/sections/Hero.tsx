@@ -9,7 +9,7 @@ const { identity, ui } = content
 const iconLinks = [
   { href: `mailto:${identity.email}`, label: ui.emailLabel, icon: FiMail },
   { href: identity.linkedin, label: ui.linkedinLabel, icon: FaLinkedinIn, external: true },
-  { href: `tel:${identity.phones[0]?.replace(/\s/g, '')}`, label: ui.phoneLabel, icon: FiPhone },
+  { href: `tel:${identity.phones[0]?.number.replace(/\s/g, '')}`, label: ui.phoneLabel, icon: FiPhone },
 ]
 
 export function Hero() {

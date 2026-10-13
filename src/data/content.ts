@@ -18,7 +18,7 @@ export interface Identity {
   badge: string
   valueProp: string
   email: string
-  phones: string[]
+  phones: { label: string; number: string }[]
   linkedin: string
   location: string
   cvUrl: string
@@ -144,6 +144,16 @@ export interface Content {
     problemLabel: string
     solutionLabel: string
     savedLabel: string
+    degreeLabel: string
+    certLabel: string
+    contactIntro: string
+    copyEmail: string
+    copied: string
+    copyFailed: string
+    locationLabel: string
+    cvLabel: string
+    backToTop: string
+    rights: string
   }
 }
 
@@ -156,7 +166,10 @@ export const content: Content = {
     valueProp:
       'I turn electrical designs into coordinated, buildable BIM models and shop drawings — across the UAE, Saudi Arabia and Egypt.',
     email: 'lnopy67@gmail.com',
-    phones: ['+971 50 180 0351', '+20 109 490 5285'],
+    phones: [
+      { label: 'UAE', number: '+971 50 180 0351' },
+      { label: 'Egypt', number: '+20 109 490 5285' },
+    ],
     linkedin: 'https://www.linkedin.com/in/lnopy/',
     location: 'Abu Dhabi, UAE',
     cvUrl: '/cv/Ahmed-Elnopy-CV.pdf',
@@ -517,5 +530,16 @@ export const content: Content = {
     problemLabel: 'Problem',
     solutionLabel: 'Solution',
     savedLabel: 'Time saved',
+    degreeLabel: 'Degree',
+    certLabel: 'Certification',
+    contactIntro:
+      'Looking for an electrical engineer who can take a package from design to approved shop drawings? Send me a message — I usually reply within a day.',
+    copyEmail: 'Copy email',
+    copied: 'Email copied to clipboard',
+    copyFailed: 'Could not copy — please select the address manually',
+    locationLabel: 'Location',
+    cvLabel: 'Curriculum vitae',
+    backToTop: 'Back to top',
+    rights: 'All rights reserved.',
   },
 }

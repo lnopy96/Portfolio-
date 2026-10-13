@@ -130,6 +130,16 @@ export interface Content {
     phoneLabel: string
     statsHeading: string
     toolsHeading: string
+    filterSector: string
+    filterCountry: string
+    filterAll: string
+    /** {n} = shown, {total} = all */
+    showing: string
+    noProjects: string
+    resetFilters: string
+    viewProject: string
+    renderCredit: string
+    countries: Record<Project['country'], string>
   }
 }
 
@@ -490,5 +500,14 @@ export const content: Content = {
     phoneLabel: 'Phone',
     statsHeading: 'At a glance',
     toolsHeading: 'Tools I work with',
+    filterSector: 'Sector',
+    filterCountry: 'Country',
+    filterAll: 'All',
+    showing: 'Showing {n} of {total} projects',
+    noProjects: 'No projects match these filters.',
+    resetFilters: 'Reset filters',
+    viewProject: 'View project',
+    renderCredit: 'Render:',
+    countries: { UAE: 'UAE', KSA: 'Saudi Arabia', EG: 'Egypt' },
   },
 }

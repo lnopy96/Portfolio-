@@ -2,11 +2,12 @@ import { MotionConfig } from 'motion/react'
 import { Navbar } from './components/layout/Navbar'
 import { Section, SectionHeader } from './components/layout/Section'
 import { About } from './components/sections/About'
+import { Projects } from './components/sections/Projects'
 import { Hero } from './components/sections/Hero'
 import { Stats } from './components/sections/Stats'
 import { content } from './data/content'
 
-const built = new Set(['about'])
+const built = new Set(['about', 'projects'])
 
 function App() {
   const { nav, sections, ui } = content
@@ -24,6 +25,7 @@ function App() {
         <Hero />
         <Stats />
         <About />
+        <Projects />
         {/* Placeholder sections until later tasks replace them. */}
         {nav
           .filter(({ id }) => !built.has(id))

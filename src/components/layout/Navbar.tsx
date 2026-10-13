@@ -33,10 +33,12 @@ export function Navbar() {
       <nav aria-label={ui.primaryNav} className="container-page flex h-16 items-center justify-between gap-6">
         <a
           href="#top"
-          aria-label={`${identity.name} — ${ui.homeLink}`}
           className="flex size-9 items-center justify-center rounded-md border border-accent/40 bg-accent-soft font-heading text-sm font-semibold text-accent"
         >
-          {identity.initials}
+          <span aria-hidden="true">{identity.initials}</span>
+          <span className="sr-only">
+            {identity.name} — {ui.homeLink}
+          </span>
         </a>
 
         <ul className="hidden items-center gap-6 text-sm lg:flex">

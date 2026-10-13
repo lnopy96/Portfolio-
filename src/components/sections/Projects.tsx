@@ -40,6 +40,8 @@ function Cover({ project }: { project: Project }) {
     return (
       <img
         src={project.image}
+        srcSet={`${project.image.replace('.webp', '-800.webp')} 800w, ${project.image} 1600w`}
+        sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
         alt=""
         loading="lazy"
         decoding="async"

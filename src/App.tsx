@@ -1,6 +1,7 @@
 import { Navbar } from './components/layout/Navbar'
 import { Section, SectionHeader } from './components/layout/Section'
 import { Hero } from './components/sections/Hero'
+import { Stats } from './components/sections/Stats'
 import { content } from './data/content'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <main id="main">
         <Hero />
+        <Stats />
         {/* Placeholder sections until Tasks 4–9 replace them. */}
         {nav.map(({ id }) => {
           const s = sections[id]

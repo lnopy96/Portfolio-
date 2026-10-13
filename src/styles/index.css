@@ -78,3 +78,13 @@
 @utility section-label {
   @apply font-sans text-xs font-medium tracking-widest text-accent uppercase;
 }
+
+@theme {
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}

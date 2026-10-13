@@ -124,6 +124,8 @@ export interface Content {
     emailLabel: string
     linkedinLabel: string
     phoneLabel: string
+    statsHeading: string
+    toolsHeading: string
   }
 }
 
@@ -488,5 +490,7 @@ export const content: Content = {
     emailLabel: 'Email',
     linkedinLabel: 'LinkedIn',
     phoneLabel: 'Phone',
+    statsHeading: 'At a glance',
+    toolsHeading: 'Tools I work with',
   },
 }

@@ -216,3 +216,18 @@ Title, meta description, OG/Twitter tags, `og.png` (1200×630), favicon, `robots
 3. Open Claude Code in the repo, model Sonnet 5.5.
 4. Send: "Read PLAN.md. Do Task 1 only."
 5. Fill the Section 6 list while Task 1 runs.
+
+---
+
+## 8. Status (updated 2026-10-13)
+- [x] Task 1 Setup · [x] Task 2 Content · [x] Task 3 Navbar + Hero · [x] Task 4 Stats + Marquee
+- [x] Task 5 About · [x] Task 6 Projects · [x] Task 7 Experience · [x] Task 8 Automation + Skills
+- [x] Task 9 Education + Contact + Footer · [x] Task 10 Polish
+- [x] Task 11 SEO (meta, OG/Twitter, og.png, favicon, robots.txt, sitemap.xml, JSON-LD)
+- [ ] Task 11 Deploy: import the repo on Vercel (needs your account — see README). Custom domain optional.
+
+Lighthouse (local production build): mobile 93 / 100 / 100 / 100, desktop 100 / 100 / 100 / 100
+(performance / accessibility / best practices / SEO).
+
+Still optional: images for Jacob & Co., RCU Schools, MODON, AlUla, King Salman Park, Odyssia
+(cards show a blueprint placeholder until added); Formspree contact form.

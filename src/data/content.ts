@@ -99,7 +99,16 @@ export interface SectionMeta {
   heading: string
 }
 
+export interface Seo {
+  title: string
+  description: string
+  ogImage: string
+  ogImageAlt: string
+  knowsAbout: string[]
+}
+
 export interface Content {
+  seo: Seo
   identity: Identity
   nav: NavItem[]
   sections: Record<string, SectionMeta>
@@ -158,6 +167,14 @@ export interface Content {
 }
 
 export const content: Content = {
+  seo: {
+    title: 'Ahmed Gamal Elnopy — Electrical Engineer · MEP & BIM',
+    description:
+      'Electrical engineer in Abu Dhabi delivering MEP electrical design, BIM coordination and shop drawings across the UAE, Saudi Arabia and Egypt. Revit, Navisworks, Dynamo and C# automation.',
+    ogImage: '/og.png',
+    ogImageAlt: 'Ahmed Gamal Elnopy — Electrical Engineer, MEP & BIM',
+    knowsAbout: ['Electrical design', 'BIM', 'Revit', 'Navisworks', 'Shop drawings', 'Light current systems', 'Revit API'],
+  },
   identity: {
     name: 'Ahmed Gamal Elnopy',
     initials: 'AE',

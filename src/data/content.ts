@@ -52,6 +52,8 @@ export interface Project {
   description: string
   tags: string[]
   image: string
+  /** Owner of the render, shown as a small credit. */
+  imageCredit?: string
   link?: string
 }
 
@@ -210,7 +212,8 @@ export const content: Content = {
       sector: 'Residential',
       description: 'Electrical shop drawings on Yas Island, Abu Dhabi.',
       tags: ['Shop Drawings', 'Lighting', 'Containment'],
-      image: '/images/projects/placeholder.webp',
+      image: '/images/projects/mancity.webp',
+      imageCredit: 'Ohana',
     },
     {
       id: 2,
@@ -220,7 +223,8 @@ export const content: Content = {
       sector: 'Residential',
       description: 'Electrical shop drawings on Al Reem Island, Abu Dhabi.',
       tags: ['Shop Drawings', 'Power', 'Lighting'],
-      image: '/images/projects/placeholder.webp',
+      image: '/images/projects/eliesaab.webp',
+      imageCredit: 'Ohana',
     },
     {
       id: 3,
@@ -260,7 +264,8 @@ export const content: Content = {
       sector: 'Entertainment',
       description: 'BIM models and construction drawings for an entertainment complex in Madinah.',
       tags: ['BIM Model', 'Construction Dwgs', 'Revit'],
-      image: '/images/projects/placeholder.webp',
+      image: '/images/projects/madina.webp',
+      imageCredit: 'SEVEN',
     },
     {
       id: 7,
@@ -290,7 +295,8 @@ export const content: Content = {
       sector: 'Residential',
       description: 'Electrical shop drawings for a residential development in the New Capital.',
       tags: ['Shop Drawings', 'Revit', 'RFIs'],
-      image: '/images/projects/placeholder.webp',
+      image: '/images/projects/ilbosco.webp',
+      imageCredit: 'Misr Italia',
     },
     {
       id: 10,
@@ -310,7 +316,8 @@ export const content: Content = {
       sector: 'Mixed-use',
       description: 'Optimized electrical layouts to cut rework during construction.',
       tags: ['Layout Optimization', 'RFIs', 'Shop Drawings'],
-      image: '/images/projects/placeholder.webp',
+      image: '/images/projects/district5.webp',
+      imageCredit: 'Marakez',
     },
   ],
 

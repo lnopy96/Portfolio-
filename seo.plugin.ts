@@ -5,7 +5,7 @@ import { content } from './src/data/content.ts'
  * Injects SEO/OG/Twitter meta and JSON-LD from content.ts, and emits robots.txt + sitemap.xml.
  * The absolute site URL comes from SITE_URL, or Vercel's VERCEL_PROJECT_PRODUCTION_URL at build time.
  */
-export function seo(): Plugin {
+export function seo(base = '/'): Plugin {
   const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL
   const siteUrl = (process.env.SITE_URL || (vercel ? `https://${vercel}` : '')).replace(/\/$/, '')
   const abs = (path: string) => `${siteUrl}${path}`
@@ -45,6 +45,7 @@ export function seo(): Plugin {
     ...(siteUrl
       ? [`<link rel="canonical" href="${siteUrl}/" />`, `<meta property="og:url" content="${siteUrl}/" />`]
       : []),
+    `<link rel="preload" as="image" href="${base}images/profile-480.webp" imagesrcset="${base}images/profile-480.webp 480w, ${base}images/profile.webp 768w" imagesizes="(min-width: 768px) 384px, 90vw" fetchpriority="high" />`,
     `<script type="application/ld+json">${JSON.stringify(person).replace(/</g, '\\u003c')}</script>`,
   ].join('\n    ')
 

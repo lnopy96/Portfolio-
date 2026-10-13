@@ -3,6 +3,7 @@ import type { IconType } from 'react-icons'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FiCheck, FiCopy, FiDownload, FiMapPin, FiPhone } from 'react-icons/fi'
 import { content } from '../../data/content'
+import { asset } from '../../lib/asset'
 import { Section, SectionHeader } from '../layout/Section'
 import { Reveal } from '../ui/Reveal'
 
@@ -33,7 +34,7 @@ const items: Item[] = [
     external: true,
   },
   { icon: FiMapPin, label: ui.locationLabel, value: identity.location },
-  { icon: FiDownload, label: ui.cvLabel, value: ui.downloadCv, href: identity.cvUrl, download: true },
+  { icon: FiDownload, label: ui.cvLabel, value: ui.downloadCv, href: asset(identity.cvUrl), download: true },
 ]
 
 export function Contact() {

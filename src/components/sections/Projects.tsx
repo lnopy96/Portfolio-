@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { useMemo, useState } from 'react'
 import { FiArrowUpRight, FiMapPin } from 'react-icons/fi'
 import { content, type Project } from '../../data/content'
+import { asset } from '../../lib/asset'
 import { Section, SectionHeader } from '../layout/Section'
 import { Card } from '../ui/Card'
 import { FilterChips } from '../ui/FilterChips'
@@ -39,8 +40,8 @@ function Cover({ project }: { project: Project }) {
   if (project.image) {
     return (
       <img
-        src={project.image}
-        srcSet={`${project.image.replace('.webp', '-800.webp')} 800w, ${project.image} 1600w`}
+        src={asset(project.image)}
+        srcSet={`${asset(project.image.replace('.webp', '-800.webp'))} 800w, ${asset(project.image)} 1600w`}
         sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
         alt=""
         loading="lazy"

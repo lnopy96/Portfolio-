@@ -1,6 +1,7 @@
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FiArrowRight, FiDownload, FiMail, FiMapPin, FiPhone } from 'react-icons/fi'
 import { content } from '../../data/content'
+import { asset } from '../../lib/asset'
 import { Badge } from '../ui/Badge'
 import { Button } from '../ui/Button'
 
@@ -30,7 +31,7 @@ export function Hero() {
             <Button href="#projects">
               {ui.viewWork} <FiArrowRight aria-hidden="true" />
             </Button>
-            <Button href={identity.cvUrl} variant="ghost" download>
+            <Button href={asset(identity.cvUrl)} variant="ghost" download>
               <FiDownload aria-hidden="true" /> {ui.downloadCv}
             </Button>
           </div>
@@ -55,8 +56,8 @@ export function Hero() {
           <div className="flex aspect-[3/4] items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-surface-2 to-bg">
             {identity.photo ? (
               <img
-                src={identity.photo}
-                srcSet={`${identity.photo.replace('.webp', '-480.webp')} 480w, ${identity.photo} 768w`}
+                src={asset(identity.photo)}
+                srcSet={`${asset(identity.photo.replace('.webp', '-480.webp'))} 480w, ${asset(identity.photo)} 768w`}
                 sizes="(min-width: 768px) 384px, 90vw"
                 alt={identity.photoAlt}
                 width={768}

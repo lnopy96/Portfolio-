@@ -3,8 +3,11 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import { seo } from './seo.plugin.ts'
 
+// BASE_PATH is set by the GitHub Pages workflow ('/Portfolio-/'); Vercel serves from '/'.
+const base = process.env.BASE_PATH || '/'
+
 // https://vite.dev/config/
-// For GitHub Pages, add: base: '/Portfolio-/'
 export default defineConfig({
-  plugins: [react(), tailwindcss(), seo()],
+  base,
+  plugins: [react(), tailwindcss(), seo(base)],
 })

@@ -33,7 +33,10 @@ export interface Stat {
   label: string
 }
 
+export type FocusIcon = 'power' | 'lightCurrent' | 'office' | 'bim'
+
 export interface FocusArea {
+  icon: FocusIcon
   title: string
   description: string
 }
@@ -51,7 +54,8 @@ export interface Project {
   sector: string
   description: string
   tags: string[]
-  image: string
+  /** Cover image; a designed placeholder is shown when missing. */
+  image?: string
   /** Owner of the render, shown as a small credit. */
   imageCredit?: string
   link?: string
@@ -192,10 +196,10 @@ export const content: Content = {
       'My work covers LV/MV power design and light current systems, and turning them into approved shop drawings and submittals. I coordinate MEP models in Revit and Navisworks, and I write Dynamo scripts and C# add-ins to automate repetitive Revit work.',
     ],
     focusAreas: [
-      { title: 'Power & LV/MV', description: 'Load schedules, single-line diagrams and BOQs.' },
-      { title: 'Light current', description: 'Fire alarm, data networks, CCTV and sound systems.' },
-      { title: 'Technical office', description: 'Shop drawings, details and material submittals.' },
-      { title: 'BIM & automation', description: 'Revit, Navisworks coordination, Dynamo and C# add-ins.' },
+      { icon: 'power', title: 'Power & LV/MV', description: 'Load schedules, single-line diagrams and BOQs.' },
+      { icon: 'lightCurrent', title: 'Light current', description: 'Fire alarm, data networks, CCTV and sound systems.' },
+      { icon: 'office', title: 'Technical office', description: 'Shop drawings, details and material submittals.' },
+      { icon: 'bim', title: 'BIM & automation', description: 'Revit, Navisworks coordination, Dynamo and C# add-ins.' },
     ],
     facts: [
       { label: 'Based in', value: 'Abu Dhabi, UAE' },
@@ -236,7 +240,6 @@ export const content: Content = {
       sector: 'Residential',
       description: 'Electrical shop drawings at Al Jurf, Abu Dhabi.',
       tags: ['Shop Drawings', 'Power', 'Containment'],
-      image: '/images/projects/placeholder.webp',
     },
     {
       id: 4,
@@ -246,7 +249,6 @@ export const content: Content = {
       sector: 'Education',
       description: 'Complete electrical design for Royal Commission for AlUla school projects.',
       tags: ['Full Design', 'Revit', 'BIM'],
-      image: '/images/projects/placeholder.webp',
     },
     {
       id: 5,
@@ -256,7 +258,6 @@ export const content: Content = {
       sector: 'Industrial',
       description: 'Electrical design packages for the Saudi Authority for Industrial Cities.',
       tags: ['Power', 'Lighting', 'LV'],
-      image: '/images/projects/placeholder.webp',
     },
     {
       id: 6,
@@ -277,7 +278,6 @@ export const content: Content = {
       sector: 'Government',
       description: 'Coordination with architects and contractors on Royal Commission for AlUla projects.',
       tags: ['Coordination', 'BIM', 'QTO'],
-      image: '/images/projects/placeholder.webp',
     },
     {
       id: 8,
@@ -287,7 +287,6 @@ export const content: Content = {
       sector: 'Entertainment',
       description: 'Coordination with architects and contractors on Riyadh\'s King Salman Park.',
       tags: ['Coordination', 'Landscape', 'BIM'],
-      image: '/images/projects/placeholder.webp',
     },
     {
       id: 9,
@@ -308,7 +307,6 @@ export const content: Content = {
       sector: 'Residential',
       description: 'Electrical shop drawings for a residential community in Mostakbal City.',
       tags: ['Shop Drawings', 'Revit', 'Site Support'],
-      image: '/images/projects/placeholder.webp',
     },
     {
       id: 11,

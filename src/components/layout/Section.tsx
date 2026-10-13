@@ -19,11 +19,12 @@ interface SectionHeaderProps {
   label: string
   heading: string
   intro?: string
+  className?: string
 }
 
-export function SectionHeader({ number, label, heading, intro }: SectionHeaderProps) {
+export function SectionHeader({ number, label, heading, intro, className = 'mb-12 md:mb-16' }: SectionHeaderProps) {
   return (
-    <header className="mb-12 max-w-3xl md:mb-16">
+    <header className={`max-w-3xl ${className}`}>
       <p className="section-label">
         {number} — {label}
       </p>
